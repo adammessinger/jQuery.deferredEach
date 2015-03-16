@@ -1,6 +1,5 @@
 # Directories #
 ###############
-# Ignore "latest" symlink and old versions.
 .idea/
 
 # Packages #
