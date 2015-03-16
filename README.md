@@ -1,10 +1,10 @@
 #jQuery.deferredEach()
 
-This is a non-blocking, asynchronous implementation of jQuery.each() using jQuery's
-deferred/promise features. It allows you to iterate over huge arrays or objects
-without hogging the UI thread in which client-side JS runs. That kind of thread-
-hogging can freeze up the browser's user interface and lead to the dreaded long-
-running script error message.
+This is a non-blocking, asynchronous implementation of [jQuery.each()](http://api.jquery.com/jQuery.each/)
+using [jQuery's deferred/promise features](http://api.jquery.com/category/deferred-object/).
+It allows you to iterate over huge arrays or objects without hogging the UI thread
+in which client-side JS runs. That kind of thread-hogging can freeze up the
+browser's user interface and lead to the dreaded long-running script error message.
 
 ##How Does It Work?
 
@@ -31,7 +31,6 @@ $.deferredEach(massive_obj, processThing)
   .done(doBigFinish)
   .fail(appeaseAudience)
   .always(takeBow);
-}
 ```
 
 * `.progress()` callbacks get passed a decimal representation of how much of the
