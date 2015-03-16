@@ -50,3 +50,8 @@ a simple loop. That's because it's using `setTimeout` to take a short break afte
 each iteration and let the browser handle other work, like responding to user
 interactions. This plugin is meant for those times you just can't avoid iterating
 over a huge object or array in the browser.
+
+##Credit Where Due
+
+jQuery.deferredEach is based on $.yieldingEach -- posted by colinmarc to the
+now-defunct Forrst.com -- and the source for jQuery.each().
