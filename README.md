@@ -53,5 +53,6 @@ over a huge object or array in the browser.
 
 ##Credit Where Due
 
-jQuery.deferredEach is based on $.yieldingEach -- posted by colinmarc to the
-now-defunct Forrst.com -- and the source for jQuery.each().
+jQuery.deferredEach is based on $.yieldingEach -- posted by
+[colinmarc](https://github.com/colinmarc) to the now-defunct Forrst.com -- and
+the source for jQuery.each().
