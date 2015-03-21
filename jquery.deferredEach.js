@@ -9,7 +9,7 @@
  * for jQuery.each()
  */
 
-(function($, undefined) {
+;(function($, undefined) {
   'use strict';
 
   $.deferredEach = function(collection, callback) {
