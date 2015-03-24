@@ -1,6 +1,8 @@
 /**
- * jQuery.deferredEach() -- a non-blocking, async implementation of $.each()
+ * jQuery.deferredEach()
+ * A non-blocking, async implementation of $.each()
  * using jQuery's deferred/promise features.
+ * https://github.com/adammessinger/jQuery.deferredEach
  *
  * Copyright (c) 2015 Adam Messinger, http://zenscope.com/
  * Released under the MIT license, see LICENSE.txt for details.
