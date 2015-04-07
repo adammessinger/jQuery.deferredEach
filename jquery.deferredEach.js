@@ -31,7 +31,7 @@
           setTimeout(next, 1);
         }
         child_deferreds[i - 1].resolve();
-        parent_deferred.notify(i / length);
+        parent_deferred.notify((i / length), i, length);
       };
       next();
     } else {
@@ -45,13 +45,15 @@
           setTimeout(next, 1);
         }
         child_deferreds[i - 1].resolve();
-        parent_deferred.notify(i / keys.length);
+        parent_deferred.notify((i / keys.length), i, keys.length);
       };
       next();
     }
 
     $.when.apply(undefined, child_deferreds).then(function() {
-      parent_deferred.notify(1);
+      var notify_length = is_array ? length : keys.length;
+
+      parent_deferred.notify(1, i, notify_length);
       parent_deferred.resolve(collection);
     });
     return parent_deferred.promise();
