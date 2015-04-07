@@ -40,8 +40,8 @@ $.deferredEach(massive_obj, processThing)
 
 * `amount_done`: A decimal representation of how much of the work has been
 completed on each iteration.
-* `count`: The integer count of last-processed item in the collection. **Unlike
-an array index, `count` starts at 1 rather than 0.**
+* `count`: The integer count of the last-processed item in the collection.
+**Unlike an array index, `count` starts at 1 rather than 0.**
 * `length`: The length of the collection being processed.
 
 Processing an object with four properties would run your progress callback
