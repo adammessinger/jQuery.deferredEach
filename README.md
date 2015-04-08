@@ -6,6 +6,10 @@ It allows you to iterate over huge arrays or objects without hogging the UI thre
 in which client-side JS runs. That kind of thread-hogging can freeze up the
 browser's user interface and lead to the dreaded long-running script error message.
 
+If you'd like an example of `$.deferredEach()` in action, check out
+[Flexitable](https://github.com/adammessinger/Flexitable) -- the jQuery plugin
+for which I originally created it.
+
 ##How Does It Work?
 
 Instead of this:
