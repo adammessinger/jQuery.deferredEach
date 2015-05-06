@@ -1,6 +1,7 @@
-# Directories #
-###############
+# Editor Files & Dirs #
+#######################
 .idea/
+*.sublime-*
 
 # Packages #
 ############
