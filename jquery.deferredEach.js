@@ -1,10 +1,10 @@
 /**
  * jQuery.deferredEach()
- * A non-blocking, async implementation of $.each()
- * using jQuery's deferred/promise features.
+ * A non-blocking, async implementation of $.each() using
+ * jQuery's deferred/promise features.
  * https://github.com/adammessinger/jQuery.deferredEach
  *
- * Copyright (c) 2015 Adam Messinger, http://zenscope.com/
+ * Copyright (c) 2016 Adam Messinger, http://zenscope.com/
  * Released under the MIT license, see LICENSE.txt for details.
  *
  * Based on "yieldingEach" by Colin Marc (http://colinmarc.com/) and the source
@@ -18,10 +18,15 @@
     var i = 0;
     var length = collection.length;
     var is_array = _isArraylike(collection);
+    var has_empty_collection = (is_array && !length) || $.isEmptyObject(collection);
     var parent_deferred = new $.Deferred();
     var child_deferreds;
     var keys = [];
     var next, key;
+
+    if (has_empty_collection) {
+      return parent_deferred.resolve().promise();
+    }
 
     if (is_array) {
       child_deferreds = _makeChildDeferredsArray(length);
@@ -56,6 +61,7 @@
       parent_deferred.notify(1, i, notify_length);
       parent_deferred.resolve(collection);
     });
+
     return parent_deferred.promise();
   };
 
@@ -79,7 +85,6 @@
     if (obj.nodeType === 1 && length) {
       return true;
     }
-    return type === "array" || length === 0 ||
-           (typeof length === "number" && length > 0 && (length - 1) in obj);
+    return type === "array" || length === 0 || (typeof length === "number" && length > 0 && (length - 1) in obj);
   }
 })(jQuery);
