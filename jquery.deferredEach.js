@@ -19,7 +19,7 @@
     var length = collection.length;
     var is_array = _isArraylike(collection);
     var has_empty_collection = (is_array && !length) || $.isEmptyObject(collection);
-    var parent_deferred = new $.Deferred();
+    var parent_deferred = $.Deferred();
     var child_deferreds;
     var keys = [];
     var next, key;
@@ -70,7 +70,7 @@
     var array = [];
 
     for (; i < length; i++) {
-      array.push(new $.Deferred());
+      array.push($.Deferred());
     }
     return array;
   }
